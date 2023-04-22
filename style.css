@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background: #F3F5FC;
+}
+
+.logo {
+    padding: 15px;
+    margin-left: 30px;
+    width: 50px;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 100px;
+    padding-left: 15px;
+}
+
+/* SECCION ENTRADA DE TEXTO */
+
+.encriptar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.encriptar textarea {
+    resize: none;
+    width: 80%;
+    height: 400px;
+    padding: 30px;
+    border: none;
+    background: transparent;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    outline: none;
+}
+
+.encriptar textarea::placeholder {
+    color: #0A3871;
+}
+
+.encriptar .advertencia {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 80%;
+}
+
+.encriptar .advertencia span {
+    background-color: #65747D;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.encriptar .advertencia p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+}
+
+.encriptar .botones {
+    width: 80%;
+    display: flex;
+    padding: 24px 0;
+    gap: 8px;
+}
+
+.encriptar .botones button {
+    width: 328px;
+    height: 60px;
+    background: #0A3871;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.encriptar .botones button:nth-child(2) {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+/* SECCION SALIDA DE TEXTO */
+
+.desencriptar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    border-radius: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.desencriptar .input-salida {
+    width: 100%;
+    min-height: 360px;
+    text-align: center;
+}
+
+.desencriptar .input-salida img {
+    width: 250px;
+}
+
+.desencriptar .input-salida h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #343A40;
+}
+
+.desencriptar .input-salida p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #495057;
+    margin: 10px 0 10px 0;
+}
+
+.desencriptar button {
+    width: 328px;
+    height: 60px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 50px;
+    display: none;
+}
+
+.desencriptar button.display {
+    display: block;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .desencriptar .input-salida {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: min-content;
+    }
+
+    .desencriptar .input-salida img {
+        display: none;
+    }
+
+    .desencriptar button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .encriptar .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
